@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#08050d" />
+    <meta
+      name="description"
+      content="Un pequeño universo de estrellas, hecho para ti."
+    />
+    <title>Un universo para ti</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <canvas id="universe" aria-label="Escena espacial interactiva"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <main class="intro" id="intro">
+      <div class="intro-content">
+        <button
+          class="heart-button"
+          id="enter"
+          type="button"
+          aria-label="Toca para entrar a la galaxia"
+        >
+          <span class="heart-hit-area" aria-hidden="true"></span>
+        </button>
+        <p class="invitation">Toca para entrar</p>
+      </div>
+    </main>
+
+    <div class="floating-images" id="floating-images" aria-hidden="true">
+      <img class="floating-image" src="./img/1.png" alt="" />
+      <img class="floating-image" src="./img/2.png" alt="" />
+      <img class="floating-image" src="./img/3.png" alt="" />
+      <img class="floating-image" src="./img/4.png" alt="" />
+    </div>
+
+    <p class="galaxy-caption" id="caption" aria-live="polite">
+      En la inmensidad del universo, siempre encuentro el camino hacia ti.
+    </p>
+    <div class="floating-words" id="floating-words" aria-hidden="true"></div>
+
+    <section class="finale" id="finale" aria-label="Un último mensaje para ti">
+      <p class="love-message" id="love-message" aria-live="polite" hidden>
+        Te quiero mucho, mi amor
+        <span class="love-message-note">más que todas las estrellas de este universo</span>
+      </p>
+      <button
+        class="love-button"
+        id="love-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="love-message"
+      >
+        <span class="love-button-icon" aria-hidden="true">♥</span>
+        <span class="love-button-label">Un mensajito para ti</span>
+        <span class="love-button-sparkle" aria-hidden="true">✦</span>
+      </button>
+    </section>
+  </body>
+</html>
